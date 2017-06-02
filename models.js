@@ -11,7 +11,7 @@ var Mauri = function(name, surname){
         ['/tasks','show the list of tasks that i completed during this experience\n'],
         ['/skills','show a list of skills that i\'ve learnt in Top-IX\n'],
         ['/collegues','not who but which kind of collegues i met during the experience\n'],
-        ['/problems','which problems do I found in Top-IX\n'],
+        ['/difficulties','which problems do I found in Top-IX\n'],
         ['/end','my personal page of greetings\n'],
     ];
     this.list_tasks = [];
@@ -20,6 +20,14 @@ var Mauri = function(name, surname){
 /*
     #### SETTER ####
 */
+    this.setSkill = function(nameofskill){
+        if (this.list_skills.indexOf(nameofskill) >= 0){
+            console.log('you have already push '+ nameofskill +' skill');
+        }else {
+            this.list_skills.push(nameofskill);
+            console.log('Skill '+nameofskill+' inserted!');
+        };
+    };
 
 
 

@@ -4,14 +4,31 @@ const token = '348759595:AAH6FmWnHHCISn8J7pcm7BSQov6lJbR_G2k';
 const report = new TelegramBot(token, {polling: true});
 
 
-var mauri = new Mauri('Maurizio','Bussi')
-// console.log(mauri.list_commands);
-
-
-
 var attempts = 0;
 console.log('Bot Running..');
 console.log('Time users digit:');
+
+/*
+    #### MAURI SETTINGS ####
+*/
+var mauri = new Mauri('Maurizio','Bussi')
+// console.log(mauri.list_commands);
+mauri.setSkill('python');
+mauri.setSkill('django | python');
+mauri.setSkill('flask | python');
+mauri.setSkill('javascript');
+mauri.setSkill('jQuery | javascript');
+mauri.setSkill('angularJS | javascript');
+mauri.setSkill('bootstrap | html/css/javascript');
+mauri.setSkill('git');
+mauri.setSkill('bash scripting');
+mauri.setSkill('command line interface');
+mauri.setSkill('python');
+
+console.log(mauri.list_skills);
+
+
+
 
 
 
@@ -19,7 +36,6 @@ report.onText(/\/start/, (msg,match) => {
     // console.log(msg);
     // console.log(match);
     chat_id = msg.chat.id;
-    resp = 'ciao';
 
     var list_of_commands = [];
 
@@ -47,6 +63,43 @@ report.onText(/\/tasks/, (msg,match) => {
     attempts += 1;
     console.log(attempts);
 });
+
+report.onText(/\/skills/, (msg,match) => {
+
+    chat_id = msg.chat.id;
+    resp = "skills";
+
+    report.sendMessage(chat_id, resp);
+
+
+    attempts += 1;
+    console.log(attempts);
+});
+
+report.onText(/\/collegues/, (msg,match) => {
+
+    chat_id = msg.chat.id;
+    resp = "collegues";
+
+    report.sendMessage(chat_id, resp);
+
+
+    attempts += 1;
+    console.log(attempts);
+});
+
+report.onText(/\/difficulties/, (msg,match) => {
+
+    chat_id = msg.chat.id;
+    resp = "difficulties";
+
+    report.sendMessage(chat_id, resp);
+
+
+    attempts += 1;
+    console.log(attempts);
+});
+
 
 report.onText(/\/end/,(msg)=>{
     chat_id = msg.chat.id;

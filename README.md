@@ -28,7 +28,7 @@ Not who but which kind of collegues i met during the experience
 - /collegues
 
 Which problems do I found in Top-IX
-- /problems
+- /difficulties
 
 
 My personal page of greetings
