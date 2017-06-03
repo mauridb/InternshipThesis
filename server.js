@@ -33,10 +33,8 @@ mauri.setTask('django admin shell','BE');
 mauri.setTask('django invitation mail','BE');
 mauri.setTask('django read & write file .csv','BE');
 mauri.setTask('flask blog CRUD','BE');
-console.log(mauri.list_skills);
-console.log(mauri.list_tasks);
-
-
+// console.log(mauri.list_skills);
+// console.log(mauri.list_tasks);
 
 
 
@@ -100,9 +98,12 @@ report.onText(/\/collegues/, (msg,match) => {
 report.onText(/\/difficulties/, (msg,match) => {
 
     chat_id = msg.chat.id;
-    resp = "difficulties";
+    resp = [
+        '"some trouble when i have to switch between different projects, join trough different projects was difficult for me"',
+        '"at the beginning of the internship of Top-IX I am really feeling useless and awkward"',
+    ];
 
-    report.sendMessage(chat_id, resp);
+    report.sendMessage(chat_id, 'IN MY OPIONION I FOUND THESE ISSUES:\n\n- '+resp.join('\n\n- '));
 
 
     attempts += 1;
