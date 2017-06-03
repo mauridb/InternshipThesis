@@ -23,8 +23,6 @@ mauri.setSkill('bootstrap | html/css/javascript');
 mauri.setSkill('git');
 mauri.setSkill('bash scripting');
 mauri.setSkill('command line interface');
-mauri.setSkill('python');
-
 console.log(mauri.list_skills);
 
 
@@ -67,9 +65,9 @@ report.onText(/\/tasks/, (msg,match) => {
 report.onText(/\/skills/, (msg,match) => {
 
     chat_id = msg.chat.id;
-    resp = "skills";
+    resp = mauri.get_all_skills(mauri.list_skills);
 
-    report.sendMessage(chat_id, resp);
+    report.sendMessage(chat_id, 'MY CURRENT SKILLS:\n- '+resp);
 
 
     attempts += 1;

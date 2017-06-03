@@ -1,10 +1,10 @@
 # DOCUMENTATION
 
 ## INSTALLATION GUIDE
-- Install the dependcies type the following command
+- Install the depenecies type the following command
 > source requirements.txt
 
-- Create your file
+- Create your server file
 > touch server.js
 
 - run server
@@ -14,22 +14,22 @@
 
 Digit on Telegram the following commands:
 
+- ##### /start  
 Show the list of commands
-- /start  
 
+- ##### /tasks
 Show the list of tasks that i completed during this experience
-- /tasks
 
 
+- ##### /skills
 Show a list of skills that i've learnt in Top-IX
-- /skills
 
+- ##### /collegues
 Not who but which kind of collegues i met during the experience
-- /collegues
 
+- ##### /difficulties
 Which problems do I found in Top-IX
-- /difficulties
 
 
+- ##### /end
 My personal page of greetings
-- /end

@@ -25,18 +25,19 @@ var Mauri = function(name, surname){
             console.log('you have already push '+ nameofskill +' skill');
         }else {
             this.list_skills.push(nameofskill);
-            console.log('Skill '+nameofskill+' inserted!');
+            // console.log('Skill '+nameofskill+' inserted!');
         };
     };
-
-
-
 
 /*
     #### GETTER ####
 */
     this.get_fullname = function(){
         return this.name + " - " + this.surname;
+    }
+
+    this.get_all_skills = function(list){
+        return list.join('\n- ');
     }
 
 };
