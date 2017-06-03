@@ -1,5 +1,5 @@
 # DOCUMENTATION
-Link to the public project flow
+> Link to the public project flow
 [InternshipThesis - Agile workflow](https://trello.com/b/1fC19Tnw)
 
 ## INSTALLATION GUIDE
