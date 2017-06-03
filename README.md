@@ -17,13 +17,12 @@ Digit on Telegram the following commands:
 | Commands | Description |
 |----------|-------------|
 | **/start** | Show the list of commands |  
+| **/tasks** | Show the list of tasks that i completed during this experience |
 
-- **/tasks** Show the list of tasks that i completed during this experience
+| **/skills** | Show a list of skills that i've learnt in Top-IX |
 
-- **/skills** Show a list of skills that i've learnt in Top-IX
+| **/collegues** | Not who but which kind of collegues i met during the experience |
 
-- **/collegues** Not who but which kind of collegues i met during the experience
+| **/difficulties** | Which problems I found in Top-IX |
 
-- **/difficulties** Which problems I found in Top-IX
-
-- **/end** My personal page of greetings
+| **/end** | My personal page of greetings |
