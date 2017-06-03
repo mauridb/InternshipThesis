@@ -1,7 +1,7 @@
 # DOCUMENTATION
 Link to the *public project flow*
 
-**[InternshipThesis - Agile workflow](https://trello.com/b/1fC19Tnw)**
+| **[InternshipThesis - Agile workflow](https://trello.com/b/1fC19Tnw)** |
 
 ## INSTALLATION GUIDE
 - Install the depenecies type the following command
