@@ -1,3 +1,8 @@
+/*
+####################
+STATIC VARIABLES
+####################
+*/
 const Mauri = require('./models.js');
 const TelegramBot = require('node-telegram-bot-api');
 const token = '348759595:AAH6FmWnHHCISn8J7pcm7BSQov6lJbR_G2k';
@@ -9,7 +14,9 @@ console.log('Bot Running..');
 console.log('Time users digit:');
 
 /*
-    #### MAURI SETTINGS ####
+###################
+ MAURI SETTINGS
+###################
 */
 var mauri = new Mauri('Maurizio','Bussi')
 // console.log(mauri.list_commands);
@@ -23,6 +30,7 @@ mauri.setSkill('bootstrap | html/css/javascript');
 mauri.setSkill('git');
 mauri.setSkill('bash scripting');
 mauri.setSkill('command line interface');
+mauri.setSkill('Agile Development');
 
 mauri.setTask('bootstrap modals/navbar/footer','FE');
 mauri.setTask('angularJS modals/live search/api http request','FE');
@@ -38,7 +46,11 @@ mauri.setTask('flask blog CRUD','BE');
 
 
 
-
+/*
+###############
+TELEGRAM BOT
+###############
+*/
 report.onText(/\/start/, (msg,match) => {
     // console.log(msg);
     // console.log(match);

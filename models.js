@@ -18,7 +18,9 @@ var Mauri = function(name, surname){
     this.list_skills = []
 
 /*
-    #### SETTER ####
+##############
+SETTER
+##############
 */
     this.setSkill = function(nameofskill){
         if (this.list_skills.indexOf(nameofskill) >= 0){
@@ -39,7 +41,9 @@ var Mauri = function(name, surname){
     }
 
 /*
-    #### GETTER ####
+##############
+GETTER
+##############
 */
     this.get_fullname = function(){
         return this.name + " - " + this.surname;
