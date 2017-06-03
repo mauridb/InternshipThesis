@@ -29,6 +29,15 @@ var Mauri = function(name, surname){
         };
     };
 
+    this.setTask = function(task, type){
+        if (this.list_tasks.indexOf(type + ' | ' + task) >=0 && (type == 'FE' || type == 'BE')) {
+            console.log('already push '+ task +'task');
+        }else if (this.list_tasks.indexOf(task) == -1 && (type == 'FE' || type == 'BE')) {
+            elem = type + ' | ' + task;
+            this.list_tasks.push(elem);
+        }
+    }
+
 /*
     #### GETTER ####
 */
@@ -37,6 +46,10 @@ var Mauri = function(name, surname){
     }
 
     this.get_all_skills = function(list){
+        return list.join('\n- ');
+    }
+
+    this.get_all_tasks = function(list){
         return list.join('\n- ');
     }
 

@@ -23,7 +23,18 @@ mauri.setSkill('bootstrap | html/css/javascript');
 mauri.setSkill('git');
 mauri.setSkill('bash scripting');
 mauri.setSkill('command line interface');
+
+mauri.setTask('bootstrap modals/navbar/footer','FE');
+mauri.setTask('angularJS modals/live search/api http request','FE');
+mauri.setTask('browser console usage','FE');
+mauri.setTask('HTML & CSS form/footer','FE');
+mauri.setTask('django web server','BE');
+mauri.setTask('django admin shell','BE');
+mauri.setTask('django invitation mail','BE');
+mauri.setTask('django read & write file .csv','BE');
+mauri.setTask('flask blog CRUD','BE');
 console.log(mauri.list_skills);
+console.log(mauri.list_tasks);
 
 
 
@@ -53,10 +64,10 @@ report.onText(/\/start/, (msg,match) => {
 report.onText(/\/tasks/, (msg,match) => {
 
     chat_id = msg.chat.id;
-    resp = "tasks";
+    resp = mauri.get_all_tasks(mauri.list_tasks);
 
-    report.sendMessage(chat_id, resp);
 
+    report.sendMessage(chat_id, 'TASK:\n- '+resp);
 
     attempts += 1;
     console.log(attempts);
@@ -97,7 +108,6 @@ report.onText(/\/difficulties/, (msg,match) => {
     attempts += 1;
     console.log(attempts);
 });
-
 
 report.onText(/\/end/,(msg)=>{
     chat_id = msg.chat.id;
