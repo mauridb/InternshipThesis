@@ -15,25 +15,14 @@
 Digit on Telegram the following commands:
 
 
-Show the list of commands
-- **/start**  
+- **/start** Show the list of commands  
 
+- **/tasks** Show the list of tasks that i completed during this experience
 
-Show the list of tasks that i completed during this experience
-- **/tasks**
+- **/skills** Show a list of skills that i've learnt in Top-IX
 
+- **/collegues** Not who but which kind of collegues i met during the experience
 
-Show a list of skills that i've learnt in Top-IX
-- **/skills**
+- **/difficulties** Which problems do I found in Top-IX
 
-
-Not who but which kind of collegues i met during the experience
-- **/collegues**
-
-
-Which problems do I found in Top-IX
-- **/difficulties**
-
-
-My personal page of greetings
-- **/end**
+- **/end** My personal page of greetings
