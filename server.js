@@ -86,9 +86,16 @@ report.onText(/\/skills/, (msg,match) => {
 report.onText(/\/collegues/, (msg,match) => {
 
     chat_id = msg.chat.id;
-    resp = "collegues";
+    resp = [
+        'Visual Designer',
+        'Network Engineer',
+        'Developer & Designer',
+        'Web Developer',
+        'Full Stack IT Engineer',
+        'Design Engineer',
+    ];
 
-    report.sendMessage(chat_id, resp);
+    report.sendMessage(chat_id, 'MY COLLEGUES:\n- '+resp.join('\n- '));
 
 
     attempts += 1;
