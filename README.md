@@ -23,6 +23,6 @@ Digit on Telegram the following commands:
 
 - **/collegues** Not who but which kind of collegues i met during the experience
 
-- **/difficulties** Which problems do I found in Top-IX
+- **/difficulties** Which problems I found in Top-IX
 
 - **/end** My personal page of greetings
