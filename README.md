@@ -14,8 +14,9 @@
 
 Digit on Telegram the following commands:
 
-
-- **/start** Show the list of commands  
+| Commands | Description |
+|----------|-------------|
+| **/start** | Show the list of commands |  
 
 - **/tasks** Show the list of tasks that i completed during this experience
 
