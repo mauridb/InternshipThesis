@@ -1,7 +1,7 @@
 # DOCUMENTATION
-
+| Link |
 | --------------------------------- |
-| **[InternshipThesis - Agile workflow](https://trello.com/b/1fC19Tnw)** |
+| to the project workflow click ---> **[InternshipThesis - Agile workflow](https://trello.com/b/1fC19Tnw)** |
 
 ## INSTALLATION GUIDE
 - Install the depenecies type the following command
