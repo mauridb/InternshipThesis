@@ -12,7 +12,7 @@ var Mauri = function(name, surname){
         ['/attivita','mostra la lista di attività che ho completato durante l\'esperienza.\n'],
         ['/competenze','mostra la lista di competenze acquisite in Top-IX\n'],
         ['/colleghi','il ruolo impiegato dai colleghi\n'],
-        ['/support','ENGIM PIEMONTE ARTIGIANELLI\n'],
+        ['/supporto','il supporto di Engim Artigianelli\n'],
         ['/fine','saluti finali\n'],
     ];
     this.list_tasks = [];
@@ -33,9 +33,9 @@ SETTER
     };
 
     this.setTask = function(task, type){
-        if (this.list_tasks.indexOf(type + ' | ' + task) >=0 && (type == 'FE' || type == 'BE')) {
+        if (this.list_tasks.indexOf(type + ' | ' + task) >=0 && (type == 'FRONTEND' || type == 'BACKEND')) {
             console.log('already push '+ task +'task');
-        }else if (this.list_tasks.indexOf(task) == -1 && (type == 'FE' || type == 'BE')) {
+        }else if (this.list_tasks.indexOf(task) == -1 && (type == 'FRONTEND' || type == 'BACKEND')) {
             elem = type + ' | ' + task;
             this.list_tasks.push(elem);
         }

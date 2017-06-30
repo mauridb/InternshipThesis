@@ -32,15 +32,15 @@ mauri.setSkill('bash scripting');
 mauri.setSkill('command line interface');
 mauri.setSkill('Agile Development');
 
-mauri.setTask('bootstrap modals/navbar/footer','FE');
-mauri.setTask('angularJS modals/live search/api http request','FE');
-mauri.setTask('browser console usage','FE');
-mauri.setTask('HTML & CSS form/footer','FE');
-mauri.setTask('django web server','BE');
-mauri.setTask('django admin shell','BE');
-mauri.setTask('django invitation mail','BE');
-mauri.setTask('django read & write file .csv','BE');
-mauri.setTask('flask blog CRUD','BE');
+mauri.setTask('bootstrap modals/navbar/footer','FRONTEND');
+mauri.setTask('angularJS modals/live search/api http request','FRONTEND');
+mauri.setTask('browser console usage','FRONTEND');
+mauri.setTask('HTML & CSS form/footer','FRONTEND');
+mauri.setTask('django web server','BACKEND');
+mauri.setTask('django admin shell','BACKEND');
+mauri.setTask('django invitation mail','BACKEND');
+mauri.setTask('django read & write file .csv','BACKEND');
+mauri.setTask('flask blog CRUD','BACKEND');
 // console.log(mauri.list_skills);
 // console.log(mauri.list_tasks);
 
@@ -64,7 +64,7 @@ report.onText(/\/start/, (msg,match) => {
     // console.log(list_of_commands)
 
     resp = list_of_commands.join('\n')
-    report.sendMessage(chat_id, "###########################\n# INNANZITUTTO COSA E' UN BOT??#\n###########################\n\n'Un bot è un programma che mette in relazione il programma stesso ed un utente, la relazione con il programma avviene del tutto automaticamente attraverso delle risposte precofenzionate dal programmatore attivate tramite appositi comandi..'\n ________________________________________________________________\n\nISTRUZIONI:'usa i seguenti comandi per scoprire l'esperienza di stage'\n\n"+resp);
+    report.sendMessage(chat_id, "###########################\n# INNANZITUTTO COSA E' UN BOT??#\n###########################\n\n'Un bot è un programma che mette in relazione il programma stesso ed un utente, la relazione con il programma avviene del tutto automaticamente attraverso delle risposte precofenzionate dal programmatore attivate tramite appositi comandi..'\n ________________________________________________________________\n\nISTRUZIONI:\n'usa i seguenti comandi per scoprire l'esperienza di stage'\n\n"+resp);
 
 
     attempts += 1;
@@ -121,21 +121,35 @@ report.onText(/\/topix/, (msg,match) => {
         '"ho avuto alcuni problemi quando dovevo cambiare progetto su cui lavorare, saltare da un progetto ad un altro è stato difficile per me."',
         '"all\'inizio dell\'esperienza di stage in Top-IX mi sono sentito molto inutile poichè il loro livello era troppo elevato"',
     ];
+    list_pro = [
+    '"Affiancamento efficace rivolto all\'acquisizione di competenze spendibili in questo mercato del lavoro."',
+    '"Un vincente approccio informale all\'interno di un contesto professionale puntando su di un supporto vicendevole alla programmazione del codice piuttosto che ad una malsana competizione."',
+    ];
 
     //resp.join('\n- ')
     
     resp = {
       'contro': list_difficulties.join('\n- '),
-      'pro':'ciao pro',
+      'pro':list_pro.join('\n- ')
     };
     var keys = Object.keys(resp);
     console.log(keys);
-    report.sendMessage(chat_id, 'Topix stage:\n\n-'+keys[1].toUpperCase()+':\n'+resp['contro']+'\n\n-'+keys[0].toUpperCase());
+    report.sendMessage(chat_id, 'Topix stage:\n\n- '+keys[0].toUpperCase()+':\n'+resp['contro']+'\n\n- '+keys[1].toUpperCase()+':\n'+resp['pro']);
 
 
     attempts += 1;
     console.log(attempts);
 });
+
+
+report.onText(/\/supporto/,(msg, match)=>{
+    //console.log(msg);
+    //console.log(match);
+    chat_id = msg.chat.id
+    resp = 'ENGIM:\'aspetti negativi e positvi\'\n\n -) PREPARAZIONE GENERICA ALLA PROGRAMMAZIONE\n\n +) AFFIANCAMENTO E SUPPORTO PER TUTTA LA PARTE RELATIVA ALLE COMPETENZE TRASVERSALI E DI ORIENTAMENTO DELL\'ALLIEVO\n\n +) AUTORE DEL PRIMO INSERIMENTO LAVORATIVO\n\n +) ATTENZIONE ALLA PERSONA';
+    report.sendMessage(chat_id,resp);
+    
+    });
 
 report.onText(/\/fine/,(msg)=>{
     chat_id = msg.chat.id;
