@@ -52,8 +52,8 @@ TELEGRAM BOT
 ###############
 */
 report.onText(/\/start/, (msg,match) => {
-    // console.log(msg);
-    // console.log(match);
+    //console.log(msg);
+    //console.log(match);
     chat_id = msg.chat.id;
 
     var list_of_commands = [];
@@ -64,38 +64,38 @@ report.onText(/\/start/, (msg,match) => {
     // console.log(list_of_commands)
 
     resp = list_of_commands.join('\n')
-    report.sendMessage(chat_id, "ISTRUCTIONS:\nFollow these commands to navigate inside the application..\n __________________________________\n \n"+resp);
+    report.sendMessage(chat_id, "###########################\n# INNANZITUTTO COSA E' UN BOT??#\n###########################\n\n'Un bot è un programma che mette in relazione il programma stesso ed un utente, la relazione con il programma avviene del tutto automaticamente attraverso delle risposte precofenzionate dal programmatore attivate tramite appositi comandi..'\n ________________________________________________________________\n\nISTRUZIONI:'usa i seguenti comandi per scoprire l'esperienza di stage'\n\n"+resp);
 
 
     attempts += 1;
     console.log(attempts);
 });
 
-report.onText(/\/tasks/, (msg,match) => {
+report.onText(/\/attivita/, (msg,match) => {
 
     chat_id = msg.chat.id;
     resp = mauri.get_all_tasks(mauri.list_tasks);
 
 
-    report.sendMessage(chat_id, 'TASK:\n- '+resp);
+    report.sendMessage(chat_id, 'ATTIVITA\':\n- '+resp);
 
     attempts += 1;
     console.log(attempts);
 });
 
-report.onText(/\/skills/, (msg,match) => {
+report.onText(/\/competenze/, (msg,match) => {
 
     chat_id = msg.chat.id;
     resp = mauri.get_all_skills(mauri.list_skills);
 
-    report.sendMessage(chat_id, 'MY CURRENT SKILLS:\n- '+resp);
+    report.sendMessage(chat_id, 'Le mie attuali competenze:\n- '+resp);
 
 
     attempts += 1;
     console.log(attempts);
 });
 
-report.onText(/\/collegues/, (msg,match) => {
+report.onText(/\/colleghi/, (msg,match) => {
 
     chat_id = msg.chat.id;
     resp = [
@@ -107,31 +107,39 @@ report.onText(/\/collegues/, (msg,match) => {
         'Design Engineer',
     ];
 
-    report.sendMessage(chat_id, 'MY COLLEGUES:\n- '+resp.join('\n- '));
+    report.sendMessage(chat_id, 'I miei colleghi:\n- '+resp.join('\n- '));
 
 
     attempts += 1;
     console.log(attempts);
 });
 
-report.onText(/\/difficulties/, (msg,match) => {
+report.onText(/\/topix/, (msg,match) => {
 
     chat_id = msg.chat.id;
-    resp = [
-        '"some trouble when i have to switch between different projects, join trough different projects was difficult for me"',
-        '"at the beginning of the internship of Top-IX I am really feeling useless and awkward"',
+    list_difficulties = [
+        '"ho avuto alcuni problemi quando dovevo cambiare progetto su cui lavorare, saltare da un progetto ad un altro è stato difficile per me."',
+        '"all\'inizio dell\'esperienza di stage in Top-IX mi sono sentito molto inutile poichè il loro livello era troppo elevato"',
     ];
 
-    report.sendMessage(chat_id, 'IN MY OPIONION I FOUND THESE ISSUES:\n\n- '+resp.join('\n\n- '));
+    //resp.join('\n- ')
+    
+    resp = {
+      'contro': list_difficulties.join('\n- '),
+      'pro':'ciao pro',
+    };
+    var keys = Object.keys(resp);
+    console.log(keys);
+    report.sendMessage(chat_id, 'Topix stage:\n\n-'+keys[1].toUpperCase()+':\n'+resp['contro']+'\n\n-'+keys[0].toUpperCase());
 
 
     attempts += 1;
     console.log(attempts);
 });
 
-report.onText(/\/end/,(msg)=>{
+report.onText(/\/fine/,(msg)=>{
     chat_id = msg.chat.id;
-    report.sendMessage(chat_id, "Best regards!!\n\nDeveloper: "+ mauri.get_fullname()+"\n\n\nFollow me on GitHub\n @ "+ mauri.github);
+    report.sendMessage(chat_id, "I miei migliori saluti!!\n\nSviluppatore: "+ mauri.get_fullname()+"\n\n\nSeguimi su GitHub\n @ "+ mauri.github);
 
     attempts += 1
     console.log(attempts);

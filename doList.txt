@@ -1,0 +1,2 @@
+- buttons inside the bot interface
+- difference between learning engim & learning in TOP-IX

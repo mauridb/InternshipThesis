@@ -7,12 +7,13 @@ var Mauri = function(name, surname){
     #### INIT LIST ####
 */
     this.list_commands = [
-        ['/start','show the list of commands\n'],
-        ['/tasks','show the list of tasks that i completed during this experience\n'],
-        ['/skills','show a list of skills that i\'ve learnt in Top-IX\n'],
-        ['/collegues','not who but which kind of collegues i met during the experience\n'],
-        ['/difficulties','which problems do I found in Top-IX\n'],
-        ['/end','my personal page of greetings\n'],
+        ['/start','mostra la lista di comandi\n'],
+        ['/topix','l\'azienda che mi ha ospitato\n'],
+        ['/attivita','mostra la lista di attività che ho completato durante l\'esperienza.\n'],
+        ['/competenze','mostra la lista di competenze acquisite in Top-IX\n'],
+        ['/colleghi','il ruolo impiegato dai colleghi\n'],
+        ['/support','ENGIM PIEMONTE ARTIGIANELLI\n'],
+        ['/fine','saluti finali\n'],
     ];
     this.list_tasks = [];
     this.list_skills = []

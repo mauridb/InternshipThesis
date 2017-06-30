@@ -1,0 +1,29 @@
+SERVIZI NLP:
+
+"natural language processing"
+
+  -comprensione richiesta 
+  -riconosciute e trasformate in testo
+
+Natural language understanding
+Natural language generation può essere complesso per i plurali 
+
+
+tex to speech
+dividere la frase in parti statiche e parti dinamiche 
+
+come generare audio da un testo?
+testo viene analizzato e mappato come rappresentazione fonetica e poi rappresentarlo in audio.. 
+
+
+SINTESI VOCALI:
+- normalizzazione del testo
+- da grafemi a fonemi [dizionari di pronuncia CMU pronouncing dictionary online free
+- attenzione alla disambiguazione etichette POS
+- come generare audio umano da trascrizione fonetica(speech base e inserire nello speech base le registrazioni candidate per creare la frase voce corretta
+    )]
+
+SINTESI PARAMETRICA
+-generatore di suoni periodici
+
+
