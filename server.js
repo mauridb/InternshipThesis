@@ -52,6 +52,21 @@ TELEGRAM BOT
 ###############
 */
 report.onText(/\/start/, (msg,match) => {
+    
+    /*
+    KEYBOARD
+    */
+    const  opts = {
+      reply_to_message_id: msg.message_id,
+      reply_markup: {
+        resize_keyboard: true,
+        one_time_keyboard: true,
+        keyboard: [['/start'],['/topix','/attivita','/competenze','/colleghi'],['/supporto'],['/saluti']]
+      }
+    };
+
+
+
     //console.log(msg);
     //console.log(match);
     chat_id = msg.chat.id;
@@ -64,11 +79,12 @@ report.onText(/\/start/, (msg,match) => {
     // console.log(list_of_commands)
 
     resp = list_of_commands.join('\n')
-    report.sendMessage(chat_id, "###########################\n# INNANZITUTTO COSA E' UN BOT??#\n###########################\n\n'Un bot è un programma che mette in relazione il programma stesso ed un utente, la relazione con il programma avviene del tutto automaticamente attraverso delle risposte precofenzionate dal programmatore attivate tramite appositi comandi..'\n ________________________________________________________________\n\nISTRUZIONI:\n'usa i seguenti comandi per scoprire l'esperienza di stage'\n\n"+resp);
+    report.sendMessage(chat_id, "###########################\n# INNANZITUTTO COSA E' UN BOT??#\n###########################\n\n'Un bot è un programma che mette in relazione il programma stesso ed un utente, la relazione con il programma avviene del tutto automaticamente attraverso delle risposte precofenzionate dal programmatore attivate tramite appositi comandi..'\n ________________________________________________________________\n\nISTRUZIONI:\n'usa i seguenti comandi per scoprire l'esperienza di stage'\n\n"+resp,opts);
 
 
     attempts += 1;
     console.log(attempts);
+
 });
 
 report.onText(/\/attivita/, (msg,match) => {
@@ -77,7 +93,7 @@ report.onText(/\/attivita/, (msg,match) => {
     resp = mauri.get_all_tasks(mauri.list_tasks);
 
 
-    report.sendMessage(chat_id, 'ATTIVITA\':\n- '+resp);
+    report.sendMessage(chat_id, 'ATTIVITA\':\n- '+resp,opts);
 
     attempts += 1;
     console.log(attempts);
@@ -88,7 +104,7 @@ report.onText(/\/competenze/, (msg,match) => {
     chat_id = msg.chat.id;
     resp = mauri.get_all_skills(mauri.list_skills);
 
-    report.sendMessage(chat_id, 'Le mie attuali competenze:\n- '+resp);
+    report.sendMessage(chat_id, 'Le mie attuali competenze:\n- '+resp,opts);
 
 
     attempts += 1;
@@ -107,7 +123,7 @@ report.onText(/\/colleghi/, (msg,match) => {
         'Design Engineer',
     ];
 
-    report.sendMessage(chat_id, 'I miei colleghi:\n- '+resp.join('\n- '));
+    report.sendMessage(chat_id, 'I miei colleghi:\n- '+resp.join('\n- ',opts));
 
 
     attempts += 1;
@@ -134,7 +150,7 @@ report.onText(/\/topix/, (msg,match) => {
     };
     var keys = Object.keys(resp);
     console.log(keys);
-    report.sendMessage(chat_id, 'Topix stage:\n\n- '+keys[0].toUpperCase()+':\n'+resp['contro']+'\n\n- '+keys[1].toUpperCase()+':\n'+resp['pro']);
+    report.sendMessage(chat_id, 'Topix stage:\n\n- '+keys[0].toUpperCase()+':\n'+resp['contro']+'\n\n- '+keys[1].toUpperCase()+':\n'+resp['pro'],opts);
 
 
     attempts += 1;
@@ -146,15 +162,16 @@ report.onText(/\/supporto/,(msg, match)=>{
     //console.log(msg);
     //console.log(match);
     chat_id = msg.chat.id
-    resp = 'ENGIM:\'aspetti negativi e positvi\'\n\n -) PREPARAZIONE GENERICA ALLA PROGRAMMAZIONE\n\n +) AFFIANCAMENTO E SUPPORTO PER TUTTA LA PARTE RELATIVA ALLE COMPETENZE TRASVERSALI E DI ORIENTAMENTO DELL\'ALLIEVO\n\n +) AUTORE DEL PRIMO INSERIMENTO LAVORATIVO\n\n +) ATTENZIONE ALLA PERSONA';
-    report.sendMessage(chat_id,resp);
+    resp = 'ENGIM:\'aspetti negativi e positvi\'\n\n -) Preparazione generica alla programmazione\n\n +) Affiancamento e supporto su tutta la parte relativa alle competenze trasversali e di orientamento e di orientamento dell\'allievo\n\n +) Autore del primo inserimento lavorativo\n\n +) Attenzione alla persona';
+    report.sendMessage(chat_id,resp, opts);
     
     });
 
-report.onText(/\/fine/,(msg)=>{
+report.onText(/\/saluti/,(msg)=>{
     chat_id = msg.chat.id;
-    report.sendMessage(chat_id, "I miei migliori saluti!!\n\nSviluppatore: "+ mauri.get_fullname()+"\n\n\nSeguimi su GitHub\n @ "+ mauri.github);
+    report.sendMessage(chat_id, "Grazie per l\'attenzione!!\n\nSviluppatore: "+ mauri.get_fullname()+"\n\n\nSeguimi su GitHub\n @ "+ mauri.github);
 
     attempts += 1
     console.log(attempts);
-    });
+
+});

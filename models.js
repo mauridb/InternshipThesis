@@ -13,7 +13,7 @@ var Mauri = function(name, surname){
         ['/competenze','mostra la lista di competenze acquisite in Top-IX\n'],
         ['/colleghi','il ruolo impiegato dai colleghi\n'],
         ['/supporto','il supporto di Engim Artigianelli\n'],
-        ['/fine','saluti finali\n'],
+        ['/saluti','saluti finali\n'],
     ];
     this.list_tasks = [];
     this.list_skills = []
