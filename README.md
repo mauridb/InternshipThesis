@@ -5,7 +5,7 @@
 
 ## LIST CORE COMMANDS:
 
-Digit on Telegram the following commands:
+Scegli il comando per navigare all'interno del bot e scoprire la mia esperienza di stage in TopIX:
 
 | Commands | Description |
 |----------|-------------|
@@ -15,4 +15,4 @@ Digit on Telegram the following commands:
 | **/competenze** | show a list of skills that i've learnt in Top-IX |
 | **/colleghi** | il ruolo impiegato dai colleghi |
 | **/supporto** | il supporto di Engim Artigianelli |
-| **/fine** | my personal page of greetings |
+| **/saluti** | my personal page of greetings |
