@@ -52,7 +52,7 @@ TELEGRAM BOT
 ###############
 */
 report.onText(/\/start/, (msg,match) => {
-    
+
     /*
     KEYBOARD
     */
@@ -88,6 +88,14 @@ report.onText(/\/start/, (msg,match) => {
 });
 
 report.onText(/\/attivita/, (msg,match) => {
+    const  opts = {
+      reply_to_message_id: msg.message_id,
+      reply_markup: {
+        resize_keyboard: true,
+        one_time_keyboard: true,
+        keyboard: [['/start'],['/topix','/attivita','/competenze','/colleghi'],['/supporto'],['/saluti']]
+      }
+    };
 
     chat_id = msg.chat.id;
     resp = mauri.get_all_tasks(mauri.list_tasks);
@@ -100,6 +108,14 @@ report.onText(/\/attivita/, (msg,match) => {
 });
 
 report.onText(/\/competenze/, (msg,match) => {
+    const  opts = {
+      reply_to_message_id: msg.message_id,
+      reply_markup: {
+        resize_keyboard: true,
+        one_time_keyboard: true,
+        keyboard: [['/start'],['/topix','/attivita','/competenze','/colleghi'],['/supporto'],['/saluti']]
+      }
+    };
 
     chat_id = msg.chat.id;
     resp = mauri.get_all_skills(mauri.list_skills);
@@ -112,6 +128,14 @@ report.onText(/\/competenze/, (msg,match) => {
 });
 
 report.onText(/\/colleghi/, (msg,match) => {
+    const  opts = {
+      reply_to_message_id: msg.message_id,
+      reply_markup: {
+        resize_keyboard: true,
+        one_time_keyboard: true,
+        keyboard: [['/start'],['/topix','/attivita','/competenze','/colleghi'],['/supporto'],['/saluti']]
+      }
+    };
 
     chat_id = msg.chat.id;
     resp = [
@@ -123,7 +147,7 @@ report.onText(/\/colleghi/, (msg,match) => {
         'Design Engineer',
     ];
 
-    report.sendMessage(chat_id, 'I miei colleghi:\n- '+resp.join('\n- ',opts));
+    report.sendMessage(chat_id, 'I miei colleghi:\n- '+resp.join('\n- '),opts);
 
 
     attempts += 1;
@@ -131,6 +155,14 @@ report.onText(/\/colleghi/, (msg,match) => {
 });
 
 report.onText(/\/topix/, (msg,match) => {
+    const  opts = {
+      reply_to_message_id: msg.message_id,
+      reply_markup: {
+        resize_keyboard: true,
+        one_time_keyboard: true,
+        keyboard: [['/start'],['/topix','/attivita','/competenze','/colleghi'],['/supporto'],['/saluti']]
+      }
+    };
 
     chat_id = msg.chat.id;
     list_difficulties = [
@@ -143,7 +175,7 @@ report.onText(/\/topix/, (msg,match) => {
     ];
 
     //resp.join('\n- ')
-    
+
     resp = {
       'contro': list_difficulties.join('\n- '),
       'pro':list_pro.join('\n- ')
@@ -161,13 +193,31 @@ report.onText(/\/topix/, (msg,match) => {
 report.onText(/\/supporto/,(msg, match)=>{
     //console.log(msg);
     //console.log(match);
+    const  opts = {
+      reply_to_message_id: msg.message_id,
+      reply_markup: {
+        resize_keyboard: true,
+        one_time_keyboard: true,
+        keyboard: [['/start'],['/topix','/attivita','/competenze','/colleghi'],['/supporto'],['/saluti']]
+      }
+    };
+
     chat_id = msg.chat.id
     resp = 'ENGIM:\'aspetti negativi e positvi\'\n\n -) Preparazione generica alla programmazione\n\n +) Affiancamento e supporto su tutta la parte relativa alle competenze trasversali e di orientamento e di orientamento dell\'allievo\n\n +) Autore del primo inserimento lavorativo\n\n +) Attenzione alla persona';
     report.sendMessage(chat_id,resp, opts);
-    
+
     });
 
 report.onText(/\/saluti/,(msg)=>{
+    const  opts = {
+      reply_to_message_id: msg.message_id,
+      reply_markup: {
+        resize_keyboard: true,
+        one_time_keyboard: true,
+        keyboard: [['/start'],['/topix','/attivita','/competenze','/colleghi'],['/supporto'],['/saluti']]
+      }
+    };
+
     chat_id = msg.chat.id;
     report.sendMessage(chat_id, "Grazie per l\'attenzione!!\n\nSviluppatore: "+ mauri.get_fullname()+"\n\n\nSeguimi su GitHub\n @ "+ mauri.github);
 
