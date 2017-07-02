@@ -7,6 +7,9 @@
 
 *"I bot sono applicazioni di terze parti. Sono sviluppati da programmatori esterni per interagire con gli utenti tramite messaggi, comandi e richieste in linea. Possono svolgere diverse funzioni, tutto dipende da come sono stati programmati."*
 
+## CHI è TOP-IX?
+*Azienda all'interno del mercato dell'**Information Technology** è un punto neutrale di rete globale che interconnette le reti indipendenti di diversi operatori Internet offrendo alte prestazioni, controllo del traffico, sicurezza da attacchi esterni e flessibilità nella gestione delle interconnessioni; infine si occupa di supporto allo sviluppo di nuove attività imprenditoriali, di diffondere la cultura digitale e di favorire la crescita economico-sociale.*
+
 ## LISTA DEI COMANDI PRINCIPALI:
 
 Scegli il comando per navigare all'interno del bot e scoprire la mia esperienza di stage in TopIX:
